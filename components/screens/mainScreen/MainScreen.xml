@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<component name="MainScreen" extends="Group">
+    <children>
+        <RowList 
+            id="galleryRowList" 
+            translation="[100,200]" 
+            numRows="14"
+            itemComponentName="GalleryItem"
+            itemSize="[1920,450]" 
+            rowItemSize="[[400,340]]"
+            itemSpacing="[0,-30]" 
+            showRowLabel="[true]" 
+            rowItemSpacing="[[15,0]]"
+            rowLabelOffset="[[0,10]]"
+            rowFocusAnimationStyle="fixedFocus"
+        />
+        
+        <!-- Loading indicator for additional data -->
+        <Label
+            id="loadingLabel"
+            translation="[820, 1000]"
+            text="Loading more photos..."
+            font="font:MediumSystemFont"
+            visible="false"
+        />
+    </children>
+
+    <script type="text/brightscript" uri="pkg:/components/screens/mainScreen/MainScreen.brs" />
+</component>

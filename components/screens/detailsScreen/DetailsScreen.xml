@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<component name="DetailsScreen" extends="Group">
+    <interface>
+        <field id="visible" type="boolean" value="false" />
+    </interface>
+    <children>
+        <LayoutGroup
+            id="detailsLayout"
+            translation="[100, 150]"
+            layoutDirection="horiz"
+            itemSpacings="[80]"
+            vertAlignment="top"
+        >
+            <LayoutGroup
+                id="infoColumn"
+                layoutDirection="vert"
+                itemSpacings="[16]"
+                vertAlignment="top"
+            >
+                <!-- Image container with loading overlay -->
+                <Group
+                    id="imageContainer"
+                    translation="[0, 0]"
+                >
+                    <Poster
+                        id="photoPoster"
+                        width="980"
+                        height="640"
+                        loadDisplayMode="scaleToFit"
+                    />
+                    <Label
+                        id="loadingLabel"
+                        translation="[0, 0]"
+                        width="980"
+                        height="640"
+                        text="Loading image..."
+                        font="font:LargeSystemFont"
+                        horizAlign="center"
+                        vertAlign="center"
+                        visible="false"
+                    />
+                </Group>
+                <Label
+                    id="titleLabel"
+                    width="980"
+                    font="font:MediumBoldSystemFont"
+                    horizAlign="center"
+                    wrap="true"
+                    numLines="2"
+                />
+                <Label
+                    id="dimensionsLabel"
+                    width="980"
+                    font="font:TinySystemFont"
+                    horizAlign="center"
+                />
+            </LayoutGroup>
+
+            <ScrollableText
+                id="descriptionText"
+                width="640"
+                height="640"
+                font="font:SmallSystemFont"
+                horizAlign="left"
+                vertAlign="top"
+            />
+        </LayoutGroup>
+    </children>
+    <script type="text/brightscript" uri="pkg:/components/screens/detailsScreen/DetailsScreen.brs" />
+</component>

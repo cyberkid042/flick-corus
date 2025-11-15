@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<component name="GalleryItem" extends="Group">
+    <interface>
+        <field id="itemContent" type="node" onChange="onContentChanged" />
+    </interface>
+
+    <children>
+        <Poster
+            id="poster"
+            width="400"
+            height="340"
+            loadDisplayMode="zoomToFill"
+        />
+    </children>
+    <script type="text/brightscript" uri="pkg:/components/screens/mainScreen/GalleryItem.brs" />
+</component>
