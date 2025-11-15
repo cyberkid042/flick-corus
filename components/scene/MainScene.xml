@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<component name="MainScene" extends="Scene">
+    <children>
+        <Poster
+            id="background"
+            uri="pkg:/images/app-bg.jpeg"
+            translation="[0,0]"
+            width="1920"
+            height="1080"
+        />
+
+        <Overhang
+            id="overhang"
+            logoUri="pkg:/images/app-logo.png"
+            showClock="true"
+        />
+        
+        <!-- Main Screen (hidden initially) -->
+        <MainScreen id="mainScreen" visible="false" />
+        
+        <!-- Splash Screen (shown initially) -->
+        <SplashScreen id="splashScreen" visible="true" />
+        
+        <!-- Details Screen (hidden initially) -->
+        <DetailsScreen id="detailsScreen" visible="false" />
+    </children>
+
+    <script type="text/brightscript" uri="pkg:/components/scene/MainScene.brs" />
+    <script type="text/brightscript" uri="pkg:/components/services/DataManager.brs" />
+    <script type="text/brightscript" uri="pkg:/components/utils/Config.brs" />
+</component>

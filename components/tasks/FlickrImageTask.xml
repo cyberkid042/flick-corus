@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<component name="FlickrImageTask" extends="Task">
+    <interface>
+        <!-- Input Fields -->
+        <field id="rowId" type="string" />
+        <field id="page" type="integer" value="1" />
+        <field id="perPage" type="integer" value="20" />
+        
+        <!-- Output Fields -->
+        <field id="response" type="assocarray" />
+        <field id="error" type="assocarray" />
+        <field id="status" type="string" />
+    </interface>
+    
+    <script type="text/brightscript" uri="pkg:/components/tasks/FlickrImageTask.brs" />
+    <script type="text/brightscript" uri="pkg:/components/utils/Config.brs" />
+</component>
